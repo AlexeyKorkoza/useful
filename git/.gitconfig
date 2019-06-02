@@ -1,0 +1,50 @@
+[user]
+	name = AlexeyKorkoza
+	email = alexeykorkoza@gmail.com
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  di = diff
+
+[color]
+  ui = auto
+  diff = auto
+  branch = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[merge]
+  tool = vimdiff
+
+[core]
+  pager = less -FRSXL -+X -+F
+  editor = vim
+
+[mirror]
+  summary = true
+
+[push]
+  default = matching
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+  required = false
+	process = git-lfs filter-process
